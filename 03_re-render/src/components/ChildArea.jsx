@@ -1,11 +1,14 @@
+import { memo } from "react";
+
 const style = {
   widh: "100%",
   height: "200px",
   backgroundColor: "khaki",
 };
 
-export const ChildArea = (props) => {
-  const { open } = props;
+// コンポーネントはmemoで囲む(コンポーネントのメモ化)
+export const ChildArea = memo((props) => {
+  const { open, onClickClose } = props;
   console.log("ChildAreaがレンダリングされた!!");
 
   const data = [...Array(2000).keys()];
@@ -18,8 +21,9 @@ export const ChildArea = (props) => {
       {open ? (
         <div style={style}>
           <p>子コンポーネント</p>
+          <button onClick={onClickClose}>閉じる</button>
         </div>
       ) : null}
     </>
   );
-};
+});

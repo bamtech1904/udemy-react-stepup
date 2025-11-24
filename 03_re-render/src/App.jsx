@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback, useMemo } from "react";
 import "./App.css";
 import { ChildArea } from "./components/ChildArea";
 
@@ -10,13 +10,25 @@ function App() {
 
   const onClickOpen = () => setOpen(!open);
 
+  /**
+   * 新しい関数を再生成 -> props更新と判定
+   * useCallBackで再生成を防ぐ(関数のメモ化)
+   */
+  const onClickClose = useCallback(() => setOpen(false), [setOpen]);
+
+  /**
+   * useMemoで再計算を防ぐ(変数のメモ化)
+   */
+  const temp = useMemo(() => 1 + 3, []);
+  console.log(temp);
+
   return (
     <>
       <input value={text} onChange={onChengeText} />
       <br />
       <br />
       <button onClick={onClickOpen}>表示</button>
-      <ChildArea open={open} />
+      <ChildArea open={open} onClickClose={onClickClose} />
     </>
   );
 }
