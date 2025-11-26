@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 import { SecondaryButton } from "../atoms/button/SecondaryButton";
-import { UserContext } from "../providers/UserProvider";
-import React, { useContext } from "react";
+import React from "react";
+import { useSetAtom } from "jotai";
+import { userState } from "../store/userState";
 
 export const Top = () => {
   const history = useHistory();
-  const { setUserInfo } = useContext(UserContext);
+  const setUserInfo = useSetAtom(userState);
 
   const onClickAdmin = () => {
     // 管理者フラグをグローバルstateとして定義

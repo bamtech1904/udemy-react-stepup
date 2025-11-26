@@ -1,6 +1,7 @@
-import React, { memo, useContext } from "react";
+import React, { memo } from "react";
 import styled from "styled-components";
-import { UserContext } from "../../providers/UserProvider";
+import { useAtomValue } from "jotai";
+import { userState } from "../../store/userState";
 
 export const UserIconWithName = memo((props) => {
   console.log("UserIconWithName");
@@ -8,10 +9,8 @@ export const UserIconWithName = memo((props) => {
   const { image, name } = props;
 
   // Globalなstateを取得
-  const { userInfo } = useContext(UserContext);
+  const userInfo = useAtomValue(userState);
   const isAdmin = userInfo ? userInfo.isAdmin : false;
-  // console.log(userInfo);
-  // console.log(isAdmin);
 
   return (
     <SContainer>
