@@ -20,16 +20,19 @@ $ pnpm add node-sass sass-embedded
 $ pnpm add styled-jsx
 ```
 
-# 16. styled components
+## 16. styled components
 `styled-components`をインストール
 
 ```bash
 $ pnpm add styled-components
 ```
 
-# 17. Emotion
+## 17. Emotion
 `@emotion/react`と`@emotion/styled`をインストール
 
 ```bash
 $ pnpm add @emotion/react @emotion/styled
 ```
+
+# セクション8: JSONPlaceholderでのデータ取得解説
+[JSONPlaceholder](https://jsonplaceholder.typicode.com/)
