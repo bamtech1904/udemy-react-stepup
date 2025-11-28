@@ -34,26 +34,5 @@ $ pnpm add styled-components
 $ pnpm add @emotion/react @emotion/styled
 ```
 
-# セクション5: ルーティングの基礎(React Router)
-
-## React Router v7 導入メモ
-https://reactrouter.com/start/framework/installation
-
-- Framework Modeで設定
-
-```bash
-# テンプレート作成
-pnpx create-react-router@latest 05_react-router-framework
-
-# 開発サーバー起動
-cd 05_react-router-framework
-pnpm i
-pnpm approve-builds
-pnpm run dev
-```
-
-
-
-
 # セクション8: JSONPlaceholderでのデータ取得解説
 [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
