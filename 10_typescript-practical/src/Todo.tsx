@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import { type TodoType } from "./types/todo";
 
-export const Todo: FC<Omit<TodoType, "id">> = () =>
+export const Todo: FC<Omit<TodoType, "id">> = (props) =>
   /* 必要なpropsのみ取得 */
   // props: Pick<TodoType, "userId" | "title" | "completed">
   // props: Omit<TodoType, "id">
