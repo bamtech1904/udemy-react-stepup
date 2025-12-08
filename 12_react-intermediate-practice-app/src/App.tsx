@@ -1,11 +1,10 @@
-import { Provider } from "./components/ui/provider";
-import { Button } from "@chakra-ui/react";
+import { Provider } from "@/components/ui/provider";
+import { Router } from "@/components/router/Router";
 
 function App() {
   return (
     <Provider>
-      <Button colorPalette="teal">ボタン</Button>
-      <p>ああああああああ</p>
+      <Router />
     </Provider>
   );
 }
