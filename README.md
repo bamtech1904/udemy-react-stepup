@@ -36,3 +36,18 @@ $ pnpm add @emotion/react @emotion/styled
 
 # セクション8: JSONPlaceholderでのデータ取得解説
 [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
+
+# セクション12: 実践アプリ作成(Chakra UI)
+[Chakra UI](https://chakra-ui.com/)
+
+## Chakra UIの紹介
+最新のv3を導入する場合は動画の内容は基本参考にならない。
+公式ドキュメント読んで実装する
+[Using Chakra in Vite](https://chakra-ui.com/)
+
+```bash
+pnpm i @chakra-ui/react @emotion/react
+pnpx @chakra-ui/cli snippet add
+```
+
+あとは手順4以降のセットアップを読んでいい感じにやる
