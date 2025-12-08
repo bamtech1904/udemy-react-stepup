@@ -5,6 +5,7 @@ function App() {
   return (
     <Provider>
       <Button colorPalette="teal">ボタン</Button>
+      <p>ああああああああ</p>
     </Provider>
   );
 }
