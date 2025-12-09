@@ -1,9 +1,21 @@
 import { MenuDrawer } from "@/components/molecules/MenuDrawer";
 import { Box, Flex, Heading } from "@chakra-ui/react";
 import type { FC } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 export const Header: FC = () => {
+  const navigate = useNavigate();
+
+  const onClickHome = () => {
+    navigate("/home");
+  };
+  const onClickUserManagement = () => {
+    navigate("/home/user_management");
+  };
+  const onClickSetting = () => {
+    navigate("/home/setting");
+  };
+
   return (
     <>
       <Flex
@@ -14,7 +26,13 @@ export const Header: FC = () => {
         justify="space-between"
         padding={{ base: 3, md: 5 }}
       >
-        <Flex align="center" as="a" mr={8} _hover={{ cursor: "pointer " }}>
+        <Flex
+          align="center"
+          as="a"
+          mr={8}
+          _hover={{ cursor: "pointer " }}
+          onClick={onClickHome}
+        >
           <Heading as="h1" fontSize={{ base: "md", md: "lg" }}>
             ユーザー管理アプリ
           </Heading>
@@ -26,9 +44,9 @@ export const Header: FC = () => {
           display={{ base: "none", md: "flex" }}
         >
           <Box pr={4}>
-            <Link>ユーザー一覧</Link>
+            <Link to="/home/user_management">ユーザー一覧</Link>
           </Box>
-          <Link>設定</Link>
+          <Link to="/home/setting">設定</Link>
         </Flex>
         <MenuDrawer />
       </Flex>
