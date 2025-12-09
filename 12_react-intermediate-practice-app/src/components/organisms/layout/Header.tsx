@@ -1,13 +1,6 @@
-import {
-  Box,
-  Button,
-  Drawer,
-  Flex,
-  Heading,
-  IconButton,
-} from "@chakra-ui/react";
+import { MenuDrawer } from "@/components/molecules/MenuDrawer";
+import { Box, Flex, Heading } from "@chakra-ui/react";
 import type { FC } from "react";
-import { FaBars } from "react-icons/fa";
 import { Link } from "react-router";
 
 export const Header: FC = () => {
@@ -37,48 +30,7 @@ export const Header: FC = () => {
           </Box>
           <Link>設定</Link>
         </Flex>
-        <Drawer.Root placement="start" size="xs">
-          <Drawer.Trigger asChild>
-            <IconButton
-              aria-label="メニューボタン"
-              size="sm"
-              variant="plain"
-              display={{ base: "block", md: "none" }}
-            >
-              <FaBars />
-            </IconButton>
-          </Drawer.Trigger>
-          <Drawer.Positioner>
-            <Drawer.Content>
-              <Drawer.Body p={0} bg="gray.100">
-                <Button
-                  w="100%"
-                  bg="white"
-                  color="black"
-                  _hover={{ bg: "gray.100" }}
-                >
-                  TOP
-                </Button>
-                <Button
-                  w="100%"
-                  bg="white"
-                  color="black"
-                  _hover={{ bg: "gray.100" }}
-                >
-                  ユーザー一覧
-                </Button>
-                <Button
-                  w="100%"
-                  bg="white"
-                  color="black"
-                  _hover={{ bg: "gray.100" }}
-                >
-                  設定
-                </Button>
-              </Drawer.Body>
-            </Drawer.Content>
-          </Drawer.Positioner>
-        </Drawer.Root>
+        <MenuDrawer />
       </Flex>
     </>
   );
