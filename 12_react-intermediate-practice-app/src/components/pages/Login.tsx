@@ -1,5 +1,6 @@
-import { Box, Button, Flex, Heading, Input, Stack } from "@chakra-ui/react";
+import { Box, Flex, Heading, Input, Stack } from "@chakra-ui/react";
 import type { FC } from "react";
+import { PrymaryButton } from "@/components/atoms/button/PrymaryButton";
 
 export const Login: FC = () => {
   return (
@@ -11,9 +12,7 @@ export const Login: FC = () => {
         <Box borderBottom="sm" my={4} borderColor="gray.200" />
         <Stack gap={6} py={4} px={10}>
           <Input placeholder="ユーザーID" />
-          <Button bg="teal.400" color="white" _hover={{ opacity: 0.8 }}>
-            ログイン
-          </Button>
+          <PrymaryButton />
         </Stack>
       </Box>
     </Flex>
