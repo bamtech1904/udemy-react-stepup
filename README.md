@@ -51,3 +51,9 @@ pnpx @chakra-ui/cli snippet add
 ```
 
 あとは手順4以降のセットアップを読んでいい感じにやる
+
+## 75.ログイン機能の実装
+
+React 19ではReact Compilerの登場でuseMemoやuseCallbackによるメモ化が基本不要となった。
+[React Compiler](https://ja.react.dev/learn/react-compiler)
+[パフォーマンス向上！useMemo と useCallback の正しい使い方](https://qiita.com/yun_bow/items/2327d5a6c68cb23f5a66)
