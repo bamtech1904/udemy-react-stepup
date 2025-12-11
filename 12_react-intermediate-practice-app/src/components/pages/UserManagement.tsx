@@ -1,7 +1,7 @@
-import { Center, Spinner, Wrap, WrapItem } from "@chakra-ui/react";
+import { Center, Spinner, Wrap } from "@chakra-ui/react";
 import { useEffect, type FC } from "react";
-import { UserCard } from "@/components/organisms/user/UserCard";
 import { useAllUsers } from "@/hooks/useAllUsers";
+import { UserDetailDialog } from "@/components/organisms/user/UserDetailDialog";
 
 export const UserManagement: FC = () => {
   const { getUsers, users, loading } = useAllUsers();
@@ -19,13 +19,7 @@ export const UserManagement: FC = () => {
       ) : (
         <Wrap p={{ base: 4, md: 10 }}>
           {users.map((user) => (
-            <WrapItem key={user.id} mx="auto">
-              <UserCard
-                imageUrl="https://picsum.photos/800"
-                userName={user.username}
-                fullName={user.name}
-              />
-            </WrapItem>
+            <UserDetailDialog key={user.id} user={user} />
           ))}
         </Wrap>
       )}
