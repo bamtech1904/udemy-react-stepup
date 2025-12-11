@@ -1,4 +1,4 @@
-import { Center, Spinner, Wrap } from "@chakra-ui/react";
+import { Center, Spinner } from "@chakra-ui/react";
 import { useEffect, type FC } from "react";
 import { useAllUsers } from "@/hooks/useAllUsers";
 import { UserDetailDialog } from "@/components/organisms/user/UserDetailDialog";
@@ -17,11 +17,7 @@ export const UserManagement: FC = () => {
           <Spinner />
         </Center>
       ) : (
-        <Wrap p={{ base: 4, md: 10 }}>
-          {users.map((user) => (
-            <UserDetailDialog key={user.id} user={user} />
-          ))}
-        </Wrap>
+        <UserDetailDialog users={users} />
       )}
     </>
   );
