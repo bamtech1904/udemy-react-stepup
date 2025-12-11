@@ -57,3 +57,7 @@ pnpx @chakra-ui/cli snippet add
 React 19ではReact Compilerの登場でuseMemoやuseCallbackによるメモ化が基本不要となった。
 [React Compiler](https://ja.react.dev/learn/react-compiler)
 [パフォーマンス向上！useMemo と useCallback の正しい使い方](https://qiita.com/yun_bow/items/2327d5a6c68cb23f5a66)
+
+## 76,メッセージ表示機能の実装
+Toasterの実装は以下の記事が参考となった
+[【Vite × React × TypeScript】Chakra UI v3でトーストの閉じるボタンを表示・機能させる方法](https://qiita.com/ritsu21ctws/items/3ea38bb82f2d625140fc)
