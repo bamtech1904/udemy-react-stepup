@@ -31,7 +31,9 @@ export const Login: FC = () => {
             disabled={userId === ""}
             loading={loading}
             onClick={onClickLogin}
-          />
+          >
+            ログイン
+          </PrymaryButton>
         </Stack>
       </Box>
     </Flex>

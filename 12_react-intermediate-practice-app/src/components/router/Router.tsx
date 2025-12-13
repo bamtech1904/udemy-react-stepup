@@ -6,21 +6,22 @@ import { UserManagement } from "@/components/pages/UserManagement";
 import { Setting } from "@/components/pages/Setting";
 import { Page404 } from "@/components/pages/Page404";
 import { HeaderLayout } from "../templates/HeaderLayout";
+import { LoginUserProvider } from "../providers/LoginUserProvider";
 
 export const Router: FC = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Login />} />
-
-        <Route path="/home" element={<HeaderLayout />}>
-          <Route index element={<Home />} />
-          <Route path="user_management" element={<UserManagement />} />
-          <Route path="setting" element={<Setting />} />
-        </Route>
-
-        <Route path="*" element={<Page404 />} />
-      </Routes>
+      <LoginUserProvider>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/home" element={<HeaderLayout />}>
+            <Route index element={<Home />} />
+            <Route path="user_management" element={<UserManagement />} />
+            <Route path="setting" element={<Setting />} />
+          </Route>
+          <Route path="*" element={<Page404 />} />
+        </Routes>
+      </LoginUserProvider>
     </BrowserRouter>
   );
 };

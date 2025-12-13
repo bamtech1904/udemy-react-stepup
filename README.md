@@ -61,3 +61,13 @@ React 19ではReact Compilerの登場でuseMemoやuseCallbackによるメモ化�
 ## 76,メッセージ表示機能の実装
 Toasterの実装は以下の記事が参考となった
 [【Vite × React × TypeScript】Chakra UI v3でトーストの閉じるボタンを表示・機能させる方法](https://qiita.com/ritsu21ctws/items/3ea38bb82f2d625140fc)
+
+## 81. ログインユーザー情報をContextに保持してみる
+
+`Fast refresh only works when a file only exports components.`エラーに対する対処法。
+最新のReactではFast Refresh機能というのがある。
+https://zenn.dev/uttk/scraps/f25adbba87e1ba
+
+この機能を使いにはコンポーネントとコンテキストを別々のファイルで管理する必要があるので注意。
+
+[【IT】React学習（Vite）での警告（Fast refresh only works when a file only exports components.）](https://note.com/t_ak66/n/n8ab486e5f758)
